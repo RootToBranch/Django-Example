@@ -6,3 +6,7 @@ def index(req):
         'num_list': [i for i in range(1, 11)]
     }
     return render(req, "board/index.html", context)
+
+def test(req):
+    return render(req, "board/test.html")
+    
