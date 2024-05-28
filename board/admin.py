@@ -1,3 +1,7 @@
 from django.contrib import admin
 
-# Register your models here.
+from . import models as m
+
+@admin.register(m.TempUser)
+class TempUserAdmin(admin.ModelAdmin):
+    ...
