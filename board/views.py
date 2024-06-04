@@ -1,5 +1,7 @@
 from django.shortcuts import render
 
+from django.contrib.auth.forms import UserCreationForm
+
 def index(req):
     context = {
         'key': 'value',
@@ -10,3 +12,12 @@ def index(req):
 def test(req):
     return render(req, "board/test.html")
     
+
+def signup(req):
+    if req.method == "POST":
+        ...
+    else:
+        form = UserCreationForm()
+    return render(req, 'board/signup.html', {
+        'form': form
+    })
